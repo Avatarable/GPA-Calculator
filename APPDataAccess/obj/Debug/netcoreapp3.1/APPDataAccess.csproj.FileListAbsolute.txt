@@ -1,0 +1,12 @@
+C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPDataAccess\bin\Debug\netcoreapp3.1\APPDataAccess.deps.json
+C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPDataAccess\bin\Debug\netcoreapp3.1\APPDataAccess.dll
+C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPDataAccess\bin\Debug\netcoreapp3.1\APPDataAccess.pdb
+C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPDataAccess\bin\Debug\netcoreapp3.1\APPModels.dll
+C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPDataAccess\bin\Debug\netcoreapp3.1\APPModels.pdb
+C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPDataAccess\obj\Debug\netcoreapp3.1\APPDataAccess.csproj.AssemblyReference.cache
+C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPDataAccess\obj\Debug\netcoreapp3.1\APPDataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPDataAccess\obj\Debug\netcoreapp3.1\APPDataAccess.AssemblyInfoInputs.cache
+C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPDataAccess\obj\Debug\netcoreapp3.1\APPDataAccess.AssemblyInfo.cs
+C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPDataAccess\obj\Debug\netcoreapp3.1\APPDataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPDataAccess\obj\Debug\netcoreapp3.1\APPDataAccess.dll
+C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPDataAccess\obj\Debug\netcoreapp3.1\APPDataAccess.pdb

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "APPDataAccess/1.0.0": {
+        "dependencies": {
+          "APPModels": "1.0.0"
+        },
+        "runtime": {
+          "APPDataAccess.dll": {}
+        }
+      },
+      "APPModels/1.0.0": {
+        "runtime": {
+          "APPModels.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "APPDataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "APPModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
