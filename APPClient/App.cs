@@ -30,6 +30,14 @@ namespace APPClient
                 {
                     utilities.ViewGPA();
                 }
+                else if (option == "3")
+                {
+                    utilities.ResetRecords();
+                }
+                else if (option == "4")
+                {
+                    Environment.Exit(0);
+                }
 
                 Console.ReadKey();
                 Console.Clear();

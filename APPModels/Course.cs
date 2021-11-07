@@ -7,6 +7,8 @@ namespace APPModels
         public string CourseNameAndCode { get; set; }
         public int CourseUnit { get; set; }
         public int CourseScore { get; set; }
+        public string Grade { get; set; }
+        public int GradeUnit { get; set; }
 
         public bool Validate()
         {

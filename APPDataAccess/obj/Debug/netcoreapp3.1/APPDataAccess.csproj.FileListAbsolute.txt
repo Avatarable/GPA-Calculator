@@ -10,3 +10,4 @@ C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPDataAccess\obj\De
 C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPDataAccess\obj\Debug\netcoreapp3.1\APPDataAccess.csproj.CoreCompileInputs.cache
 C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPDataAccess\obj\Debug\netcoreapp3.1\APPDataAccess.dll
 C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPDataAccess\obj\Debug\netcoreapp3.1\APPDataAccess.pdb
+C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPDataAccess\obj\Debug\netcoreapp3.1\APPDataAccess.csproj.CopyComplete

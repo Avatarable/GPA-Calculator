@@ -77,5 +77,11 @@ namespace APPLibrary
 
             logger.ShowGPA(gpa, repository.GetCourses());
         }
+
+        public void ResetRecords()
+        {
+            repository.Reset();
+            logger.ShowInfo("All courses removed!");
+        }
     }
 }

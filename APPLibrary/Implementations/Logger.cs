@@ -11,14 +11,15 @@ namespace APPLibrary.Implementations
 
         public void ShowUserOptions()
         {
-            Console.WriteLine("GPA Calculator");
+            //Console.WriteLine("     =======  GPA Calculator  ======");
+            Console.WriteLine();
 
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("Select an option below");
-            sb.AppendLine("1. Add New Course");
-            sb.AppendLine("2. View GPA");
-            sb.AppendLine("3. Reset Records");
-            sb.AppendLine("4. Exit");
+            sb.AppendLine("     Select an option below:");
+            sb.AppendLine("     1. Add New Course");
+            sb.AppendLine("     2. View GPA");
+            sb.AppendLine("     3. Reset Records");
+            sb.AppendLine("     4. Exit");
 
             Console.WriteLine(sb);
         }
@@ -26,23 +27,49 @@ namespace APPLibrary.Implementations
 
         public void ShowGPA(double gpa, List<Course> courses)
         {
+            Console.Clear();
+            Console.WriteLine();
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("==============================\n============================");
-            sb.AppendLine($"GPA: {gpa}");
+            sb.AppendLine("     |---------------|-------------|-------|------------|");
+            sb.AppendLine("     | COURSE & CODE | COURSE UNIT | GRADE | GRADE-UNIT |");
+            sb.AppendLine("     |---------------|-------------|-------|------------|");
+            //                         14              12         6         11
+
+            foreach(Course course in courses)
+            {
+                sb.Append($"     | {course.CourseNameAndCode}");
+                for (int i = 0; i < (14 - course.CourseNameAndCode.Length); i++) sb.Append(" ");
+                sb.Append($"| {course.CourseUnit}");
+                for (int i = 0; i < (12 - course.CourseUnit.ToString().Length); i++) sb.Append(" ");
+                sb.Append($"| {course.Grade}");
+                for (int i = 0; i < 5; i++) sb.Append(" ");
+                sb.Append($"| {course.GradeUnit}");
+                for (int i = 0; i < 10; i++) sb.Append(" ");
+                sb.AppendLine("|");
+            }
+
+            sb.AppendLine("     |--------------------------------------------------|");
+            sb.AppendLine($"     Your GPA is = {gpa.ToString("F")} to 2 decimal places");
+            
             Console.WriteLine(sb);
+
+            //Test
+            //Console.WriteLine(gpa.GetType());
+            //Console.WriteLine(gpa.ToString().Length);
+            //Console.WriteLine(gpa.ToString() == "NaN");
         }
 
         public void ShowInfo(string info)
         {
             Console.WriteLine();
-            Console.WriteLine($"==             {info}            ==");
+            Console.WriteLine($"     == {info} ==");
         }
 
         public void ShowErrorMsg(string msg)
         {
             Console.WriteLine();
-            Console.WriteLine($"********** {msg} ************");
+            Console.WriteLine($"     ****** {msg} ******");
             Console.WriteLine();
         }
     }

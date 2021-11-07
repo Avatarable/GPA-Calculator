@@ -20,5 +20,10 @@ namespace APPDataAccess.Repositories.InMemoryRepository.Implementations
         {
             return InMemoryStore.Courses;
         }
+
+        public void Reset()
+        {
+            InMemoryStore.Courses.Clear();
+        }
     }
 }

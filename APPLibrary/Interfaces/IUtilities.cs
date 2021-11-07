@@ -10,5 +10,6 @@ namespace APPLibrary
         public bool AddCourse();
         public void ViewCourses();
         public void ViewGPA();
+        public void ResetRecords();
     }
 }

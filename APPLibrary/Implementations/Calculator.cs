@@ -16,40 +16,49 @@ namespace APPLibrary.Implementations
 
             foreach(Course course in courses)
             {
-                qualityPoints.Add(course.CourseUnit * Grading(course.CourseScore));
+                qualityPoints.Add(course.CourseUnit * (int)Grading(course.CourseScore));
+                //gradeUnits.Add((int)Grading(course.CourseScore));
                 gradeUnits.Add(course.CourseUnit);
+
+                course.Grade = Grading(course.CourseScore).ToString();
+                course.GradeUnit = (int)Grading(course.CourseScore);
             }
 
             double gpa = (double)qualityPoints.Sum() / (double)gradeUnits.Sum();
             return  gpa;
         }
 
-        public int Grading(int courseScore)
+        public Grades Grading(int courseScore)
         {
             if(courseScore>=70 && courseScore <= 100)
             {
-                return 5;
+                return Grades.A;
             }
             else if (courseScore >= 60 && courseScore <= 69)
             {
-                return 4;
+                return Grades.B;
             }
             else if (courseScore >= 50 && courseScore <= 59)
             {
-                return 3;
+                return Grades.C;
             }
             else if (courseScore >= 45 && courseScore <= 49)
             {
-                return 2;
+                return Grades.D;
             }
             else if (courseScore >= 40 && courseScore <= 44)
             {
-                return 1;
+                return Grades.E;
             }
             else
             {
-                return 0;
+                return Grades.F;
             }
+        }
+
+        public enum Grades
+        {
+            F, E, D, C, B, A
         }
     }
 }
