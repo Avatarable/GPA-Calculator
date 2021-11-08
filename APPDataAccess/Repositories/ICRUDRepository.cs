@@ -7,6 +7,7 @@ namespace APPDataAccess.Repositories
     public interface ICRUDRepository
     {
         bool Add<T>(T model);
-        //int RowCount();
+        bool Reset();
+        int RowCount();
     }
 }

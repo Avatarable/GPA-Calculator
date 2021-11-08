@@ -1,47 +1,60 @@
-﻿using APPDataAccess.Repositories;
-using APPDataAccess.Repositories.InMemoryRepository.Interfaces;
-using APPDataAccess.Repositories.InMemoryRepository.Implementations;
+﻿using APPDataAccess.Repositories.InMemoryRepository.Interfaces;
 using APPModels;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using APPLibrary.Implementations;
+using APPLibrary.Interfaces;
 
 namespace APPLibrary
 {
     public class Utilities : IUtilities
     {
-        readonly ICourseRepository repository = new CourseRepository();
-        readonly Logger logger = new Logger();
+        readonly ICourseRepository _repository;
+        readonly ILogger _logger;
+        readonly ICalculator _calculator;
+
+        public Utilities(ICourseRepository repo, ILogger logger, ICalculator calc)
+        {
+            _repository = repo;
+            _logger = logger;
+            _calculator = calc;
+        }
 
         public string GetUserOption()
         {
             string[] options = { "1", "2", "3", "4", "N", "V", "R", "Q" };
-            logger.ShowUserOptions();            
+            _logger.ShowUserOptions();            
 
             string option = Console.ReadLine();
 
             while (!options.Contains(option))
             {
                 Console.Clear();
-                logger.ShowErrorMsg("Option unavailable!");
-                logger.ShowUserOptions();
+                _logger.ShowErrorMsg("Option unavailable!");
+                _logger.ShowUserOptions();
                 option = Console.ReadLine();
             }
             return option;
         }
 
-        public bool AddCourse()
+        public void AddCourse()
         {
-            Console.WriteLine("Enter Course Name and Code");
+            Console.Clear();
+            _logger.ShowHeader("Add New Course");
+
+            _logger.ShowInstruction("Enter Course Name and Code");
             string courseNameCode = Console.ReadLine();
+            while (string.IsNullOrWhiteSpace(courseNameCode))
+            {
+                Console.Clear();
+                _logger.ShowHeader("Add New Course");
+                _logger.ShowInstruction("Enter Course Name and Code");
+                courseNameCode = Console.ReadLine();
+            }
 
-            Console.WriteLine("Enter Course Unit");
-            int courseUnit = Convert.ToInt16(Console.ReadLine());
+            int courseUnit = GetValidInput("Enter Course Unit", 50);
+            int courseScore = GetValidInput("Enter Course Score", 100);
 
-            Console.WriteLine("Enter Course Score");
-            int courseScore = Convert.ToInt16(Console.ReadLine());
 
             var course = new Course
             {
@@ -50,38 +63,67 @@ namespace APPLibrary
                 CourseScore = courseScore
             };
 
+
             if (course.Validate())
             {
-                repository.Add(course);
-                logger.ShowInfo($"You added {courseNameCode}");
+                if (_repository.Add(course))
+                {
+                    _logger.ShowInfo($"You added {courseNameCode}");
+                }
+                else
+                {
+                    _logger.ShowErrorMsg("Cannot Add Course");
+                }
             }
-            return false;
         }
 
-        public void ViewCourses()
-        {
-            var courses = repository.GetCourses();
-            foreach (Course course in courses)
-            {
-                Console.WriteLine("=======================");
-                Console.WriteLine(course.CourseNameAndCode);
-                Console.WriteLine(course.CourseUnit);
-                Console.WriteLine(course.CourseScore);
-            }
-        }
 
         public void ViewGPA()
         {
-            Calculator calculator = new Calculator();
-            double gpa = calculator.CalculateGPA(repository.GetCourses());
+            //Calculator _calculator = new Calculator();
+            double gpa = _calculator.CalculateGPA(_repository.GetCourses());
 
-            logger.ShowGPA(gpa, repository.GetCourses());
+            _logger.ShowGPA(gpa, _repository.GetCourses());
         }
 
         public void ResetRecords()
         {
-            repository.Reset();
-            logger.ShowInfo("All courses removed!");
+            bool reset = _repository.Reset();
+            if (reset)
+            {
+                _logger.ShowInfo("All courses removed!");
+            }
+            else
+            {
+                _logger.ShowErrorMsg("Cannot remove courses");
+            }
+        }
+
+        public int GetValidInput(string instruction, int range)
+        {
+            int output = default;
+            bool valid = false;
+            while (!valid)
+            {
+                valid = true;
+                _logger.ShowInstruction(instruction);
+                try
+                {
+                    output = Convert.ToInt16(Console.ReadLine());
+                    if (output < 1 || output > range)
+                    {
+                        _logger.ShowErrorMsg($"Can only be a number between 1 and {range}");
+                        valid = false;
+                    }
+                }
+                catch (Exception e)
+                {
+                    // Log (e.Message) to File
+                    valid = false;
+                    _logger.ShowErrorMsg($"Can only be a number between 1 and {range}");
+                }
+            }
+            return output;
         }
     }
 }

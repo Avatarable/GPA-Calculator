@@ -7,8 +7,7 @@ namespace APPLibrary
     public interface IUtilities
     {
         public string GetUserOption();
-        public bool AddCourse();
-        public void ViewCourses();
+        public void AddCourse();
         public void ViewGPA();
         public void ResetRecords();
     }

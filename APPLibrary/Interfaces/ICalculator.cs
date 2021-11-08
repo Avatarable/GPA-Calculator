@@ -1,10 +1,11 @@
-﻿using System;
+﻿using APPModels;
 using System.Collections.Generic;
-using System.Text;
 
-namespace APPLibrary.Interfaces
+namespace APPLibrary.Implementations
 {
     public interface ICalculator
     {
+        double CalculateGPA(List<Course> courses);
+        Calculator.Grades Grading(int courseScore);
     }
 }

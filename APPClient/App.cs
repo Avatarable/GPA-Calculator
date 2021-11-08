@@ -11,13 +11,13 @@ namespace APPClient
 {
     static class App
     {
+        public static IUtilities utilities;
         public static void Run()
         {
-
-            IUtilities utilities = new Utilities();
-
+            GlobalConfig global = new GlobalConfig();
             ConsoleSettings();
-         
+
+            utilities = global.utilities;         
 
             while (true)
             {
@@ -47,8 +47,8 @@ namespace APPClient
         public static void ConsoleSettings()
         {
             Console.Title = "GPA Calculator";
-            Console.SetWindowSize(85, 30);
-            Console.SetBufferSize(85, 30);
+            Console.SetWindowSize(75, 30);
+            Console.SetBufferSize(75, 30);
 
         }
     }

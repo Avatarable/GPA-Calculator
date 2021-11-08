@@ -1,12 +1,15 @@
 ﻿using APPModels;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace APPLibrary.Interfaces
 {
     public interface ILogger
     {
-        public void ShowGPA(double gpa, List<Course> courses);
+        void ShowErrorMsg(string msg);
+        void ShowGPA(double gpa, List<Course> courses);
+        void ShowHeader(string header);
+        void ShowInstruction(string instruction);
+        void ShowInfo(string info);
+        void ShowUserOptions();
     }
 }

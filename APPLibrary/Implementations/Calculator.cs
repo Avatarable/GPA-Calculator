@@ -7,14 +7,14 @@ using System.Linq;
 
 namespace APPLibrary.Implementations
 {
-    public class Calculator
+    public class Calculator : ICalculator
     {
         public double CalculateGPA(List<Course> courses)
         {
             List<int> qualityPoints = new List<int>();
             List<int> gradeUnits = new List<int>();
 
-            foreach(Course course in courses)
+            foreach (Course course in courses)
             {
                 qualityPoints.Add(course.CourseUnit * (int)Grading(course.CourseScore));
                 //gradeUnits.Add((int)Grading(course.CourseScore));
@@ -25,12 +25,12 @@ namespace APPLibrary.Implementations
             }
 
             double gpa = (double)qualityPoints.Sum() / (double)gradeUnits.Sum();
-            return  gpa;
+            return gpa;
         }
 
         public Grades Grading(int courseScore)
         {
-            if(courseScore>=70 && courseScore <= 100)
+            if (courseScore >= 70 && courseScore <= 100)
             {
                 return Grades.A;
             }

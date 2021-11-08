@@ -2,26 +2,36 @@
 using APPModels;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace APPLibrary.Implementations
 {
     public class Logger : ILogger
     {
+        public void ShowHeader(string header)
+        {
+            Console.WriteLine();
+            Console.WriteLine($"     {header}");
+            Console.Write("     ");
+            for (int i = 0; i < header.Length; i++) Console.Write("-");
+            Console.WriteLine();
+        }
 
         public void ShowUserOptions()
         {
             //Console.WriteLine("     =======  GPA Calculator  ======");
-            Console.WriteLine();
+            ShowHeader("Select an option below:");
 
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("     Select an option below:");
             sb.AppendLine("     1. Add New Course");
             sb.AppendLine("     2. View GPA");
             sb.AppendLine("     3. Reset Records");
             sb.AppendLine("     4. Exit");
+            sb.AppendLine("     -----------------------");
 
-            Console.WriteLine(sb);
+            sb.Append("\n     ");
+            Console.Write(sb);
         }
 
 
@@ -36,9 +46,12 @@ namespace APPLibrary.Implementations
             sb.AppendLine("     |---------------|-------------|-------|------------|");
             //                         14              12         6         11
 
-            foreach(Course course in courses)
+            foreach (Course course in courses)
             {
-                sb.Append($"     | {course.CourseNameAndCode}");
+                string courseCodeName = (course.CourseNameAndCode.Length > 14) ? $"{course.CourseNameAndCode.Substring(0, 11)}..." 
+                    : $"{course.CourseNameAndCode}";
+
+                sb.Append($"     | {courseCodeName}");
                 for (int i = 0; i < (14 - course.CourseNameAndCode.Length); i++) sb.Append(" ");
                 sb.Append($"| {course.CourseUnit}");
                 for (int i = 0; i < (12 - course.CourseUnit.ToString().Length); i++) sb.Append(" ");
@@ -50,14 +63,20 @@ namespace APPLibrary.Implementations
             }
 
             sb.AppendLine("     |--------------------------------------------------|");
-            sb.AppendLine($"     Your GPA is = {gpa.ToString("F")} to 2 decimal places");
-            
+            //sb.AppendLine($"     Your GPA is = {gpa.ToString("F")} to 2 decimal places");
+            sb.AppendLine($"     Your GPA is = {Math.Round(gpa,2)} to 2 decimal places");
+
             Console.WriteLine(sb);
 
             //Test
             //Console.WriteLine(gpa.GetType());
             //Console.WriteLine(gpa.ToString().Length);
             //Console.WriteLine(gpa.ToString() == "NaN");
+        }
+
+        public void ShowInstruction(string instruction)
+        {
+            Console.Write($"     {instruction}:  ");
         }
 
         public void ShowInfo(string info)
@@ -69,7 +88,7 @@ namespace APPLibrary.Implementations
         public void ShowErrorMsg(string msg)
         {
             Console.WriteLine();
-            Console.WriteLine($"     ****** {msg} ******");
+            Console.WriteLine($"     **** {msg} ****");
             Console.WriteLine();
         }
     }

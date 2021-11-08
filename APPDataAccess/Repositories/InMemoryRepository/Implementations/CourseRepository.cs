@@ -10,9 +10,19 @@ namespace APPDataAccess.Repositories.InMemoryRepository.Implementations
     {
         public bool Add<T>(T model)
         {
-            Course course = model as Course;
-            InMemoryStore.Courses.Add(course);
+            int rowCountBefore = this.RowCount();
 
+            Course course = model as Course;
+            if (!InMemoryStore.Courses.Exists(n => n.CourseNameAndCode.ToLower() == course.CourseNameAndCode.ToLower()))
+            {
+                InMemoryStore.Courses.Add(course);
+            }
+
+            int rowCountAfter = this.RowCount();
+            if(rowCountBefore >= rowCountAfter)
+            {
+                return false;
+            }
             return true;
         }
 
@@ -21,9 +31,19 @@ namespace APPDataAccess.Repositories.InMemoryRepository.Implementations
             return InMemoryStore.Courses;
         }
 
-        public void Reset()
+        public bool Reset()
         {
             InMemoryStore.Courses.Clear();
+            if (this.RowCount() == 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public int RowCount()
+        {
+            return InMemoryStore.Courses.Count;
         }
     }
 }

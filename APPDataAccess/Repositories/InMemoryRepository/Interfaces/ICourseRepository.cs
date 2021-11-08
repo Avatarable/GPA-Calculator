@@ -8,6 +8,6 @@ namespace APPDataAccess.Repositories.InMemoryRepository.Interfaces
     public interface ICourseRepository : ICRUDRepository
     {
         public List<Course> GetCourses();
-        public void Reset();
+        
     }
 }
