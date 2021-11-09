@@ -15,7 +15,7 @@ namespace APPModels
             var isValid = true;
             if (string.IsNullOrWhiteSpace(CourseNameAndCode)) isValid = false;
             if (CourseUnit < 1) isValid = false;
-            if (CourseScore < 1) isValid = false;
+            if (CourseScore < 0) isValid = false;
 
             return isValid;
         }

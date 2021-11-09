@@ -4,6 +4,7 @@ using System;
 using System.Linq;
 using APPLibrary.Implementations;
 using APPLibrary.Interfaces;
+using System.IO;
 
 namespace APPLibrary
 {
@@ -12,12 +13,14 @@ namespace APPLibrary
         readonly ICourseRepository _repository;
         readonly ILogger _logger;
         readonly ICalculator _calculator;
+        private StreamWriter _sw;
 
-        public Utilities(ICourseRepository repo, ILogger logger, ICalculator calc)
+        public Utilities(ICourseRepository repo, ILogger logger, ICalculator calc, StreamWriter sw)
         {
             _repository = repo;
             _logger = logger;
             _calculator = calc;
+            _sw = sw;
         }
 
         public string GetUserOption()
@@ -52,8 +55,8 @@ namespace APPLibrary
                 courseNameCode = Console.ReadLine();
             }
 
-            int courseUnit = GetValidInput("Enter Course Unit", 50);
-            int courseScore = GetValidInput("Enter Course Score", 100);
+            int courseUnit = GetValidInput("Enter Course Unit", 1, 50);
+            int courseScore = GetValidInput("Enter Course Score", 0, 100);
 
 
             var course = new Course
@@ -72,7 +75,7 @@ namespace APPLibrary
                 }
                 else
                 {
-                    _logger.ShowErrorMsg("Cannot Add Course");
+                    _logger.ShowErrorMsg("Course already exists");
                 }
             }
         }
@@ -99,7 +102,7 @@ namespace APPLibrary
             }
         }
 
-        public int GetValidInput(string instruction, int range)
+        public int GetValidInput(string instruction, int start, int end)
         {
             int output = default;
             bool valid = false;
@@ -110,17 +113,19 @@ namespace APPLibrary
                 try
                 {
                     output = Convert.ToInt16(Console.ReadLine());
-                    if (output < 1 || output > range)
+                    if (output < start || output > end)
                     {
-                        _logger.ShowErrorMsg($"Can only be a number between 1 and {range}");
+                        _logger.ShowErrorMsg($"Can only be a number between {start} and {end}");
                         valid = false;
                     }
                 }
                 catch (Exception e)
                 {
                     // Log (e.Message) to File
+                    _sw.WriteLine(e.Message);
+                    //_sw.Close();
                     valid = false;
-                    _logger.ShowErrorMsg($"Can only be a number between 1 and {range}");
+                    _logger.ShowErrorMsg($"Can only be a number between {start} and {end}");
                 }
             }
             return output;

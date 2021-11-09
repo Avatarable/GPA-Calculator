@@ -63,8 +63,8 @@ namespace APPLibrary.Implementations
             }
 
             sb.AppendLine("     |--------------------------------------------------|");
-            //sb.AppendLine($"     Your GPA is = {gpa.ToString("F")} to 2 decimal places");
-            sb.AppendLine($"     Your GPA is = {Math.Round(gpa,2)} to 2 decimal places");
+            sb.AppendLine($"     Your GPA is = {gpa.ToString("F")} to 2 decimal places");
+            //sb.AppendLine($"     Your GPA is = {Math.Round(gpa,2)} to 2 decimal places");
 
             Console.WriteLine(sb);
 
