@@ -13,14 +13,14 @@ namespace APPLibrary
         readonly ICourseRepository _repository;
         readonly ILogger _logger;
         readonly ICalculator _calculator;
-        private StreamWriter _sw;
+        private readonly string _path;
 
-        public Utilities(ICourseRepository repo, ILogger logger, ICalculator calc, StreamWriter sw)
+        public Utilities(ICourseRepository repo, ILogger logger, ICalculator calc, string path)
         {
             _repository = repo;
             _logger = logger;
             _calculator = calc;
-            _sw = sw;
+            _path = path;
         }
 
         public string GetUserOption()
@@ -57,6 +57,8 @@ namespace APPLibrary
 
             int courseUnit = GetValidInput("Enter Course Unit", 1, 50);
             int courseScore = GetValidInput("Enter Course Score", 0, 100);
+
+            //_sw.Close();
 
 
             var course = new Course
@@ -122,8 +124,11 @@ namespace APPLibrary
                 catch (Exception e)
                 {
                     // Log (e.Message) to File
-                    _sw.WriteLine(e.Message);
-                    //_sw.Close();
+                    using(StreamWriter sw = new StreamWriter(_path, true))
+                    {
+                        DateTime dtNow = DateTime.Now;
+                        sw.WriteLine($"{dtNow} -- ({e.GetType()}) {e.Message}");
+                    }
                     valid = false;
                     _logger.ShowErrorMsg($"Can only be a number between {start} and {end}");
                 }

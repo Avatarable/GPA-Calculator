@@ -17,21 +17,14 @@ namespace APPLibrary
         public ICourseRepository courseRepository;
         public ILogger logger;
         public ICalculator calculator;
-        public StreamWriter sw;
+        public readonly string path = @"../../../../ErrorLog/errorLog.txt";
 
         public GlobalConfig()
         {
             courseRepository = new CourseRepository();
             logger = new Logger();
             calculator = new Calculator();
-            sw = File.CreateText(@"../../../../ErrorLog/errorLog.txt");
-            utilities = new Utilities(courseRepository, logger, calculator, sw);
-            
-        }
-
-        ~GlobalConfig()
-        {
-            sw.Close();
+            utilities = new Utilities(courseRepository, logger, calculator, path);            
         }
     }
 }
