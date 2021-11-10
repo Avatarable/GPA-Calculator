@@ -5,27 +5,49 @@ using System.Linq;
 using APPLibrary.Implementations;
 using APPLibrary.Interfaces;
 using System.IO;
+using System.Collections.Generic;
+using APPDataAccess.Repositories;
+using APPDataAccess.Repositories.InFileRepository.Interfaces;
 
 namespace APPLibrary
 {
     public class Utilities : IUtilities
     {
-        readonly ICourseRepository _repository;
+        readonly ICourseRepository _inMemRepo;
+        readonly ICourseFileRepository _inFileRepo;
+        readonly List<ICRUDRepository> _repos;
         readonly ILogger _logger;
         readonly ICalculator _calculator;
         private readonly string _path;
 
-        public Utilities(ICourseRepository repo, ILogger logger, ICalculator calc, string path)
+        public Utilities(List<ICRUDRepository> repos, ILogger logger, ICalculator calc, string path)
         {
-            _repository = repo;
+            _repos = repos;
             _logger = logger;
             _calculator = calc;
+            _inMemRepo = repos[0] as ICourseRepository;
+            _inFileRepo = repos[1] as ICourseFileRepository;
             _path = path;
+        }
+
+        public string GetStartOption()
+        {
+            string[] options = { "1", "2", "3" };
+            _logger.ShowStartOptions();
+            string option = Console.ReadLine();
+            while (!options.Contains(option))
+            {
+                Console.Clear();
+                _logger.ShowErrorMsg("Option unavailable!");
+                _logger.ShowStartOptions();
+                option = Console.ReadLine();
+            }
+            return option;
         }
 
         public string GetUserOption()
         {
-            string[] options = { "1", "2", "3", "4", "N", "V", "R", "Q" };
+            string[] options = { "1", "2", "3", "4"};
             _logger.ShowUserOptions();            
 
             string option = Console.ReadLine();
@@ -58,9 +80,6 @@ namespace APPLibrary
             int courseUnit = GetValidInput("Enter Course Unit", 1, 50);
             int courseScore = GetValidInput("Enter Course Score", 0, 100);
 
-            //_sw.Close();
-
-
             var course = new Course
             {
                 CourseNameAndCode = courseNameCode,
@@ -71,7 +90,14 @@ namespace APPLibrary
 
             if (course.Validate())
             {
-                if (_repository.Add(course))
+                bool added = false;
+                foreach(var repo in _repos)
+                {
+                    added = repo.Add(course);
+                    if (!added) break;
+                }
+
+                if (added)
                 {
                     _logger.ShowInfo($"You added {courseNameCode}");
                 }
@@ -85,15 +111,29 @@ namespace APPLibrary
 
         public void ViewGPA()
         {
-            //Calculator _calculator = new Calculator();
-            double gpa = _calculator.CalculateGPA(_repository.GetCourses());
+            double gpa = _calculator.CalculateGPA(_inMemRepo.GetCourses());
 
-            _logger.ShowGPA(gpa, _repository.GetCourses());
+            _logger.ShowGPA(gpa, _inMemRepo.GetCourses());
+        }
+
+        public void LoadCourses()
+        {
+            var courses = _inFileRepo.LoadCourses();
+            foreach(var course in courses)
+            {
+                _inMemRepo.Add(course);
+            }
+            Console.WriteLine("Loaded!!");
         }
 
         public void ResetRecords()
         {
-            bool reset = _repository.Reset();
+            bool reset = false;
+            foreach (var repo in _repos)
+            {
+                reset = repo.Reset();
+                if (!reset) break;
+            }
             if (reset)
             {
                 _logger.ShowInfo("All courses removed!");

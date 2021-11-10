@@ -10,6 +10,7 @@ namespace APPLibrary.Interfaces
         void ShowHeader(string header);
         void ShowInstruction(string instruction);
         void ShowInfo(string info);
+        void ShowStartOptions();
         void ShowUserOptions();
     }
 }

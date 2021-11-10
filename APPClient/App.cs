@@ -6,6 +6,7 @@ using APPDataAccess;
 using APPDataAccess.Repositories.InMemoryRepository;
 using APPDataAccess.Repositories;
 using APPModels;
+using System.IO;
 
 namespace APPClient
 {
@@ -17,10 +18,32 @@ namespace APPClient
             GlobalConfig global = new GlobalConfig();
             ConsoleSettings();
 
-            utilities = global.utilities;         
+            utilities = global.utilities;
+            var path = global.savePath;
+
+            var info = new FileInfo(path);
+            if (info.Length > 0)
+            {
+                var option = utilities.GetStartOption();
+                if (option == "1")
+                {
+                    utilities.LoadCourses();
+                }
+                else if(option == "2")
+                {
+                    global.courseFileRepository.Reset();
+                }
+                else if(option == "3")
+                {
+                    Environment.Exit(0);
+                }
+            }
+
+
 
             while (true)
             {
+                Console.Clear();
                 string option = utilities.GetUserOption();
                 if (option == "1")
                 {
@@ -38,9 +61,7 @@ namespace APPClient
                 {
                     Environment.Exit(0);
                 }
-
-                Console.ReadKey();
-                Console.Clear();
+                Console.ReadKey();                
             }
         }
 

@@ -12,3 +12,4 @@ C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPLibrary\obj\Debug
 C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPLibrary\obj\Debug\netcoreapp3.1\APPLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPLibrary\obj\Debug\netcoreapp3.1\APPLibrary.dll
 C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPLibrary\obj\Debug\netcoreapp3.1\APPLibrary.pdb
+C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPLibrary\obj\Debug\netcoreapp3.1\APPLibrary.csproj.CopyComplete

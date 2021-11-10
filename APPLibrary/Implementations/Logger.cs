@@ -18,6 +18,20 @@ namespace APPLibrary.Implementations
             Console.WriteLine();
         }
 
+        public void ShowStartOptions()
+        {
+            ShowHeader("GPA Calculator");
+
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("     1. Resume");
+            sb.AppendLine("     2. Start New Record");
+            sb.AppendLine("     3. Exit");
+            sb.AppendLine("     -----------------------");
+
+            sb.Append("\n     ");
+            Console.Write(sb);
+        }
+
         public void ShowUserOptions()
         {
             //Console.WriteLine("     =======  GPA Calculator  ======");
@@ -64,7 +78,6 @@ namespace APPLibrary.Implementations
 
             sb.AppendLine("     |--------------------------------------------------|");
             sb.AppendLine($"     Your GPA is = {gpa.ToString("F")} to 2 decimal places");
-            //sb.AppendLine($"     Your GPA is = {Math.Round(gpa,2)} to 2 decimal places");
 
             Console.WriteLine(sb);
 
