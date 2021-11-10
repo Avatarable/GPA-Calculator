@@ -18,4 +18,3 @@ C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPClient\obj\Debug\
 C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPClient\obj\Debug\netcoreapp3.1\APPClient.dll
 C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPClient\obj\Debug\netcoreapp3.1\APPClient.pdb
 C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPClient\obj\Debug\netcoreapp3.1\APPClient.genruntimeconfig.cache
-C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPClient\obj\Debug\netcoreapp3.1\APPClient.csproj.CopyComplete

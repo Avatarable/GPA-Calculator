@@ -12,5 +12,6 @@ namespace APPLibrary.Interfaces
         void ShowInfo(string info);
         void ShowStartOptions();
         void ShowUserOptions();
+        
     }
 }

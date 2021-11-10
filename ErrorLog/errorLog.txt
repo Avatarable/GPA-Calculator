@@ -4,3 +4,5 @@
 11/10/2021 12:51:34 AM -- (System.IO.DirectoryNotFoundException) Could not find a part of the path 'C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPClient\bin\Debug\APPDataAccess\InFileStore.txt'.
 11/10/2021 12:54:04 AM -- (System.IO.DirectoryNotFoundException) Could not find a part of the path 'C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPClient\bin\APPDataAccess\InFileStore.txt'.
 11/10/2021 4:30:26 AM -- (System.FormatException) Input string was not in a correct format.
+11/10/2021 11:35:41 AM -- (System.FormatException) Input string was not in a correct format.
+11/10/2021 2:25:19 PM -- (System.OverflowException) Value was either too large or too small for an Int16.

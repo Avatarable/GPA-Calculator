@@ -8,6 +8,7 @@ namespace APPLibrary
     {
         public string GetStartOption();
         public string GetUserOption();
+        bool GetYesOrNo(string ques);
         public void AddCourse();
         void LoadCourses();
         public void ViewGPA();

@@ -77,14 +77,11 @@ namespace APPLibrary.Implementations
             }
 
             sb.AppendLine("     |--------------------------------------------------|");
-            sb.AppendLine($"     Your GPA is = {gpa.ToString("F")} to 2 decimal places");
+            if (Double.IsNaN(gpa)) sb.AppendLine("     No course recorded.");
+            else sb.AppendLine($"     Your GPA is = {gpa.ToString("F")} to 2 decimal places");
 
             Console.WriteLine(sb);
 
-            //Test
-            //Console.WriteLine(gpa.GetType());
-            //Console.WriteLine(gpa.ToString().Length);
-            //Console.WriteLine(gpa.ToString() == "NaN");
         }
 
         public void ShowInstruction(string instruction)
@@ -96,6 +93,7 @@ namespace APPLibrary.Implementations
         {
             Console.WriteLine();
             Console.WriteLine($"     == {info} ==");
+            Console.WriteLine();
         }
 
         public void ShowErrorMsg(string msg)
@@ -104,5 +102,6 @@ namespace APPLibrary.Implementations
             Console.WriteLine($"     **** {msg} ****");
             Console.WriteLine();
         }
+
     }
 }

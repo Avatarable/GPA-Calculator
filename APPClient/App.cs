@@ -7,18 +7,21 @@ using APPDataAccess.Repositories.InMemoryRepository;
 using APPDataAccess.Repositories;
 using APPModels;
 using System.IO;
+using APPLibrary.Interfaces;
 
 namespace APPClient
 {
     static class App
     {
         public static IUtilities utilities;
+        public static ILogger logger;
         public static void Run()
         {
             GlobalConfig global = new GlobalConfig();
             ConsoleSettings();
 
             utilities = global.utilities;
+            logger = global.logger;
             var path = global.savePath;
 
             var info = new FileInfo(path);
@@ -47,7 +50,11 @@ namespace APPClient
                 string option = utilities.GetUserOption();
                 if (option == "1")
                 {
-                    utilities.AddCourse();
+                    do
+                    {
+                        utilities.AddCourse();
+                    } while (utilities.GetYesOrNo("Add another course? (y/n)"));
+                    continue;
                 }
                 else if (option == "2")
                 {
@@ -65,12 +72,17 @@ namespace APPClient
             }
         }
 
+
+
+        // ==================== OPTIONAL ========================
         public static void ConsoleSettings()
         {
             Console.Title = "GPA Calculator";
-            Console.SetWindowSize(75, 30);
-            Console.SetBufferSize(75, 30);
-
+            Console.SetWindowSize(70, 30);
+            Console.SetBufferSize(70, 30);
+            Console.BackgroundColor = ConsoleColor.Gray;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.Clear();
         }
     }
 }

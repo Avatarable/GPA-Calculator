@@ -175,5 +175,18 @@ namespace APPLibrary
             }
             return output;
         }
+        public bool GetYesOrNo(string ques)
+        {
+            string[] options = { "y", "n" };
+            string res;
+            do
+            {   
+                _logger.ShowInstruction(ques);
+                res = Console.ReadLine();
+            } while (!options.Contains(res.ToLower()));
+
+            if (res.ToLower() == "y") return true;
+            else return false;
+        }
     }
 }
