@@ -8,3 +8,13 @@ C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPModels\obj\Debug\
 C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPModels\obj\Debug\netcoreapp3.1\APPModels.csproj.CoreCompileInputs.cache
 C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPModels\obj\Debug\netcoreapp3.1\APPModels.dll
 C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPModels\obj\Debug\netcoreapp3.1\APPModels.pdb
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPModels\bin\Debug\netcoreapp3.1\APPModels.deps.json
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPModels\bin\Debug\netcoreapp3.1\APPModels.dll
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPModels\bin\Debug\netcoreapp3.1\APPModels.pdb
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPModels\obj\Debug\netcoreapp3.1\APPModels.csproj.AssemblyReference.cache
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPModels\obj\Debug\netcoreapp3.1\APPModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPModels\obj\Debug\netcoreapp3.1\APPModels.AssemblyInfoInputs.cache
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPModels\obj\Debug\netcoreapp3.1\APPModels.AssemblyInfo.cs
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPModels\obj\Debug\netcoreapp3.1\APPModels.csproj.CoreCompileInputs.cache
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPModels\obj\Debug\netcoreapp3.1\APPModels.dll
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPModels\obj\Debug\netcoreapp3.1\APPModels.pdb

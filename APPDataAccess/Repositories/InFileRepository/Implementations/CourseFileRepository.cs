@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Threading.Tasks;
+
 
 namespace APPDataAccess.Repositories.InFileRepository.Implementations
 {
@@ -17,7 +19,7 @@ namespace APPDataAccess.Repositories.InFileRepository.Implementations
             _logErrorPath = logErrorPath;
         }
 
-        public bool Add<T>(T model)
+        public Task<bool> AddAsync<T>(T model)
         {
             try
             {
@@ -26,7 +28,7 @@ namespace APPDataAccess.Repositories.InFileRepository.Implementations
                 {
                     sw.WriteLine($"{course.CourseNameAndCode}||{course.CourseUnit}||{course.CourseScore}");
                 }
-                return true;
+                return Task.Run(() => true);
             }
             catch (Exception e)
             {
@@ -35,7 +37,7 @@ namespace APPDataAccess.Repositories.InFileRepository.Implementations
                     DateTime dtNow = DateTime.Now;
                     err.WriteLine($"{dtNow} -- ({e.GetType()}) {e.Message}");
                 }
-                return false;
+                return Task.Run(() => false);
             }
         }
 
@@ -64,7 +66,7 @@ namespace APPDataAccess.Repositories.InFileRepository.Implementations
             return courses;
         }
 
-        public bool Reset()
+        public Task<bool> ResetAsync()
         {
             bool reset = false;
             try
@@ -90,7 +92,7 @@ namespace APPDataAccess.Repositories.InFileRepository.Implementations
                     reset = true;
                 }
             }
-            return reset;
+            return Task.Run(() => reset);
         }
 
 

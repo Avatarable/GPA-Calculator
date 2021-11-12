@@ -66,24 +66,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Victor Iliya\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Avatar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Victor Iliya\\Desktop\\Able\\Week4\\Task\\GPACalculator\\APPClient\\APPClient.csproj",
+      "projectUniqueName": "C:\\Users\\Avatar\\Documents\\AB\\Week4\\Task\\GPACalculator\\APPClient\\APPClient.csproj",
       "projectName": "APPClient",
-      "projectPath": "C:\\Users\\Victor Iliya\\Desktop\\Able\\Week4\\Task\\GPACalculator\\APPClient\\APPClient.csproj",
-      "packagesPath": "C:\\Users\\Victor Iliya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Victor Iliya\\Desktop\\Able\\Week4\\Task\\GPACalculator\\APPClient\\obj\\",
+      "projectPath": "C:\\Users\\Avatar\\Documents\\AB\\Week4\\Task\\GPACalculator\\APPClient\\APPClient.csproj",
+      "packagesPath": "C:\\Users\\Avatar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Avatar\\Documents\\AB\\Week4\\Task\\GPACalculator\\APPClient\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Victor Iliya\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Avatar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -97,14 +92,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Victor Iliya\\Desktop\\Able\\Week4\\Task\\GPACalculator\\APPDataAccess\\APPDataAccess.csproj": {
-              "projectPath": "C:\\Users\\Victor Iliya\\Desktop\\Able\\Week4\\Task\\GPACalculator\\APPDataAccess\\APPDataAccess.csproj"
+            "C:\\Users\\Avatar\\Documents\\AB\\Week4\\Task\\GPACalculator\\APPDataAccess\\APPDataAccess.csproj": {
+              "projectPath": "C:\\Users\\Avatar\\Documents\\AB\\Week4\\Task\\GPACalculator\\APPDataAccess\\APPDataAccess.csproj"
             },
-            "C:\\Users\\Victor Iliya\\Desktop\\Able\\Week4\\Task\\GPACalculator\\APPLibrary\\APPLibrary.csproj": {
-              "projectPath": "C:\\Users\\Victor Iliya\\Desktop\\Able\\Week4\\Task\\GPACalculator\\APPLibrary\\APPLibrary.csproj"
+            "C:\\Users\\Avatar\\Documents\\AB\\Week4\\Task\\GPACalculator\\APPLibrary\\APPLibrary.csproj": {
+              "projectPath": "C:\\Users\\Avatar\\Documents\\AB\\Week4\\Task\\GPACalculator\\APPLibrary\\APPLibrary.csproj"
             },
-            "C:\\Users\\Victor Iliya\\Desktop\\Able\\Week4\\Task\\GPACalculator\\APPModels\\APPModels.csproj": {
-              "projectPath": "C:\\Users\\Victor Iliya\\Desktop\\Able\\Week4\\Task\\GPACalculator\\APPModels\\APPModels.csproj"
+            "C:\\Users\\Avatar\\Documents\\AB\\Week4\\Task\\GPACalculator\\APPModels\\APPModels.csproj": {
+              "projectPath": "C:\\Users\\Avatar\\Documents\\AB\\Week4\\Task\\GPACalculator\\APPModels\\APPModels.csproj"
             }
           }
         }
@@ -133,7 +128,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

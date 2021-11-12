@@ -8,24 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Victor Iliya\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Avatar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Victor Iliya\\Desktop\\Able\\Week4\\Task\\GPACalculator\\APPModels\\APPModels.csproj",
+      "projectUniqueName": "C:\\Users\\Avatar\\Documents\\AB\\Week4\\Task\\GPACalculator\\APPModels\\APPModels.csproj",
       "projectName": "APPModels",
-      "projectPath": "C:\\Users\\Victor Iliya\\Desktop\\Able\\Week4\\Task\\GPACalculator\\APPModels\\APPModels.csproj",
-      "packagesPath": "C:\\Users\\Victor Iliya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Victor Iliya\\Desktop\\Able\\Week4\\Task\\GPACalculator\\APPModels\\obj\\",
+      "projectPath": "C:\\Users\\Avatar\\Documents\\AB\\Week4\\Task\\GPACalculator\\APPModels\\APPModels.csproj",
+      "packagesPath": "C:\\Users\\Avatar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Avatar\\Documents\\AB\\Week4\\Task\\GPACalculator\\APPModels\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Victor Iliya\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Avatar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -65,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

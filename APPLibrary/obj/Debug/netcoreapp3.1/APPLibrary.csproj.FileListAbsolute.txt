@@ -12,3 +12,18 @@ C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPLibrary\obj\Debug
 C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPLibrary\obj\Debug\netcoreapp3.1\APPLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPLibrary\obj\Debug\netcoreapp3.1\APPLibrary.dll
 C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPLibrary\obj\Debug\netcoreapp3.1\APPLibrary.pdb
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPLibrary\bin\Debug\netcoreapp3.1\APPLibrary.deps.json
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPLibrary\bin\Debug\netcoreapp3.1\APPLibrary.dll
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPLibrary\bin\Debug\netcoreapp3.1\APPLibrary.pdb
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPLibrary\bin\Debug\netcoreapp3.1\APPDataAccess.dll
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPLibrary\bin\Debug\netcoreapp3.1\APPModels.dll
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPLibrary\bin\Debug\netcoreapp3.1\APPDataAccess.pdb
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPLibrary\bin\Debug\netcoreapp3.1\APPModels.pdb
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPLibrary\obj\Debug\netcoreapp3.1\APPLibrary.csproj.AssemblyReference.cache
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPLibrary\obj\Debug\netcoreapp3.1\APPLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPLibrary\obj\Debug\netcoreapp3.1\APPLibrary.AssemblyInfoInputs.cache
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPLibrary\obj\Debug\netcoreapp3.1\APPLibrary.AssemblyInfo.cs
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPLibrary\obj\Debug\netcoreapp3.1\APPLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPLibrary\obj\Debug\netcoreapp3.1\APPLibrary.csproj.CopyComplete
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPLibrary\obj\Debug\netcoreapp3.1\APPLibrary.dll
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPLibrary\obj\Debug\netcoreapp3.1\APPLibrary.pdb

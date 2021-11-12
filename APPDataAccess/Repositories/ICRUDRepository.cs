@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace APPDataAccess.Repositories
 {
     public interface ICRUDRepository
     {
-        bool Add<T>(T model);
-        bool Reset();
+        Task<bool> AddAsync<T>(T model);
+        Task<bool> ResetAsync();
         int RowCount();
     }
 }

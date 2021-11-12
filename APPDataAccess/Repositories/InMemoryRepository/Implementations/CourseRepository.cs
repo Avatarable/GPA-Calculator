@@ -3,12 +3,13 @@ using APPModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace APPDataAccess.Repositories.InMemoryRepository.Implementations
 {
     public class CourseRepository : ICourseRepository
     {
-        public bool Add<T>(T model)
+        public Task<bool> AddAsync<T>(T model)
         {
             int rowCountBefore = this.RowCount();
 
@@ -21,24 +22,24 @@ namespace APPDataAccess.Repositories.InMemoryRepository.Implementations
             int rowCountAfter = this.RowCount();
             if(rowCountBefore >= rowCountAfter)
             {
-                return false;
+                return Task.Run(()=>false);
             }
-            return true;
+            return Task.Run(() => true);
         }
 
-        public List<Course> GetCourses()
+        public Task<List<Course>> GetCoursesAsync()
         {
-            return InMemoryStore.Courses;
+            return Task.Run(() => InMemoryStore.Courses);
         }
 
-        public bool Reset()
+        public Task<bool> ResetAsync()
         {
             InMemoryStore.Courses.Clear();
             if (this.RowCount() == 0)
             {
-                return true;
+                return Task.Run(() => true);
             }
-            return false;
+            return Task.Run(() => false);
         }
 
         public int RowCount()

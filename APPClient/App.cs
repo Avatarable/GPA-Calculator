@@ -34,7 +34,7 @@ namespace APPClient
                 }
                 else if(option == "2")
                 {
-                    global.courseFileRepository.Reset();
+                    global.courseFileRepository.ResetAsync();
                 }
                 else if(option == "3")
                 {
@@ -52,17 +52,17 @@ namespace APPClient
                 {
                     do
                     {
-                        utilities.AddCourse();
+                        utilities.AddCourseAsync();
                     } while (utilities.GetYesOrNo("Add another course? (y/n)"));
                     continue;
                 }
                 else if (option == "2")
                 {
-                    utilities.ViewGPA();
+                    utilities.ViewGPAAsync();
                 }
                 else if (option == "3")
                 {
-                    utilities.ResetRecords();
+                    utilities.ResetRecordsAsync();
                 }
                 else if (option == "4")
                 {
@@ -74,7 +74,7 @@ namespace APPClient
 
 
 
-        // ==================== OPTIONAL ========================
+        // ==================== CONSOLE SETTINGS ========================
         public static void ConsoleSettings()
         {
             Console.Title = "GPA Calculator";

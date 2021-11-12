@@ -5,6 +5,7 @@ using System.Linq;
 using APPLibrary.Implementations;
 using APPLibrary.Interfaces;
 using System.IO;
+using System.Threading.Tasks;
 using System.Collections.Generic;
 using APPDataAccess.Repositories;
 using APPDataAccess.Repositories.InFileRepository.Interfaces;
@@ -62,7 +63,7 @@ namespace APPLibrary
             return option;
         }
 
-        public void AddCourse()
+        public async Task AddCourseAsync()
         {
             Console.Clear();
             _logger.ShowHeader("Add New Course");
@@ -93,7 +94,7 @@ namespace APPLibrary
                 bool added = false;
                 foreach(var repo in _repos)
                 {
-                    added = repo.Add(course);
+                    added = await repo.AddAsync(course);
                     if (!added) break;
                 }
 
@@ -109,11 +110,11 @@ namespace APPLibrary
         }
 
 
-        public void ViewGPA()
+        public async Task ViewGPAAsync()
         {
-            double gpa = _calculator.CalculateGPA(_inMemRepo.GetCourses());
+            double gpa = _calculator.CalculateGPA( await _inMemRepo.GetCoursesAsync());
 
-            _logger.ShowGPA(gpa, _inMemRepo.GetCourses());
+            _logger.ShowGPA(gpa, await _inMemRepo.GetCoursesAsync());
         }
 
         public void LoadCourses()
@@ -121,17 +122,17 @@ namespace APPLibrary
             var courses = _inFileRepo.LoadCourses();
             foreach(var course in courses)
             {
-                _inMemRepo.Add(course);
+                _inMemRepo.AddAsync(course);
             }
             Console.WriteLine("Loaded!!");
         }
 
-        public void ResetRecords()
+        public async Task ResetRecordsAsync()
         {
             bool reset = false;
             foreach (var repo in _repos)
             {
-                reset = repo.Reset();
+                reset = await repo.ResetAsync();
                 if (!reset) break;
             }
             if (reset)

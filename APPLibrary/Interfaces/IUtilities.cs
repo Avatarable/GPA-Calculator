@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace APPLibrary
 {
@@ -9,9 +10,9 @@ namespace APPLibrary
         public string GetStartOption();
         public string GetUserOption();
         bool GetYesOrNo(string ques);
-        public void AddCourse();
+        public Task AddCourseAsync();
         void LoadCourses();
-        public void ViewGPA();
-        public void ResetRecords();
+        public Task ViewGPAAsync();
+        public Task ResetRecordsAsync();
     }
 }

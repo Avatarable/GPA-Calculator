@@ -18,3 +18,24 @@ C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPClient\obj\Debug\
 C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPClient\obj\Debug\netcoreapp3.1\APPClient.dll
 C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPClient\obj\Debug\netcoreapp3.1\APPClient.pdb
 C:\Users\Victor Iliya\Desktop\Able\Week4\Task\GPACalculator\APPClient\obj\Debug\netcoreapp3.1\APPClient.genruntimeconfig.cache
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPClient\bin\Debug\netcoreapp3.1\APPClient.exe
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPClient\bin\Debug\netcoreapp3.1\APPClient.deps.json
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPClient\bin\Debug\netcoreapp3.1\APPClient.runtimeconfig.json
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPClient\bin\Debug\netcoreapp3.1\APPClient.runtimeconfig.dev.json
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPClient\bin\Debug\netcoreapp3.1\APPClient.dll
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPClient\bin\Debug\netcoreapp3.1\APPClient.pdb
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPClient\bin\Debug\netcoreapp3.1\APPDataAccess.dll
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPClient\bin\Debug\netcoreapp3.1\APPLibrary.dll
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPClient\bin\Debug\netcoreapp3.1\APPModels.dll
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPClient\bin\Debug\netcoreapp3.1\APPDataAccess.pdb
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPClient\bin\Debug\netcoreapp3.1\APPLibrary.pdb
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPClient\bin\Debug\netcoreapp3.1\APPModels.pdb
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPClient\obj\Debug\netcoreapp3.1\APPClient.csproj.AssemblyReference.cache
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPClient\obj\Debug\netcoreapp3.1\APPClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPClient\obj\Debug\netcoreapp3.1\APPClient.AssemblyInfoInputs.cache
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPClient\obj\Debug\netcoreapp3.1\APPClient.AssemblyInfo.cs
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPClient\obj\Debug\netcoreapp3.1\APPClient.csproj.CoreCompileInputs.cache
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPClient\obj\Debug\netcoreapp3.1\APPClient.csproj.CopyComplete
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPClient\obj\Debug\netcoreapp3.1\APPClient.dll
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPClient\obj\Debug\netcoreapp3.1\APPClient.pdb
+C:\Users\Avatar\Documents\AB\Week4\Task\GPACalculator\APPClient\obj\Debug\netcoreapp3.1\APPClient.genruntimeconfig.cache
